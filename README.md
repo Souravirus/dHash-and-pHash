@@ -41,9 +41,11 @@ python3 blockhash_frr_anhd.py modified_images/
 
 The original Caltech dataset can be downloaded from [here](http://www.vision.caltech.edu/Image_Datasets/Caltech101/101_ObjectCategories.tar.gz).
 
-To make the datasets to be used in FAR, you can run the following command inside the "101\_ObjectCategories" folder:
+To modify the original dataset clear the "images" and "modified\_images" folder else create different folders and replace the names respectively for the following commands.
+
+To make the datasets to be used in FAR, you can run the following command inside the "images" folder:
 ```bash
-python3 caltech_folder_merger.py images/
+python3 caltech_folder_merger.py ../[original caltech dataset folder name]/
 ```
 Now make a folder named "modified\_images" then with the "images" folder you made while making dataset for FAR, we can make the dataset for FRR and ANHD.
 ```bash

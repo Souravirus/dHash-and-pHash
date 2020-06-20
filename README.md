@@ -1,4 +1,4 @@
-#Hybrid DHash and PHash Framework
+# Hybrid DHash and PHash Framework
 This repository houses the implementation of the hybrid dHash and pHash framework. This framework has dHash as the filter and pHash as the main algorithm. 
 
 To run any file in this repository, certain libraries needed to be installed first. For installing them, you can run this command:
@@ -38,3 +38,16 @@ For testing the Blockhash for FRR and ANHD testing on sample "modified\_images" 
 ```bash
 python3 blockhash_frr_anhd.py modified_images/
 ```
+
+The original Caltech dataset can be downloaded from [here](http://www.vision.caltech.edu/Image_Datasets/Caltech101/101_ObjectCategories.tar.gz).
+
+To make the datasets to be used in FAR, you can run the following command inside the "101\_ObjectCategories" folder:
+```bash
+python3 caltech_folder_merger.py images/
+```
+Now make a folder named "modified\_images" then with the "images" folder you made while making dataset for FAR, we can make the dataset for FRR and ANHD.
+```bash
+python3 caltech_image_separator.py images/
+```
+
+
